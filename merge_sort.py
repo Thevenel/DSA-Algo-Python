@@ -13,13 +13,19 @@ def merge_sort(arr1, arr2):
             sorted_array.append(arr2[j])
             j += 1
         print(sorted_array)
+    while i < len(arr1):
+        sorted_array.append(arr1[i])
+        i += 1
+    while j < len(arr2):
+        sorted_array.append(arr2[j])
+        j += 1
     return sorted_array
 
 
 # xxxxxxxxxxxxxxxxx Program Execution xxxxxxxxxxxxxxxx
 
 l1 = [1, 4, 6, 8, 10]
-l2 = [2, 3, 5, 7, 8, 9]
+l2 = [2, 3, 5, 7, 8, 9, 12, 15]
 
 print(f"Merged-list: {merge_sort(l1, l2)}")
 
