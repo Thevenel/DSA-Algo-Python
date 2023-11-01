@@ -9,6 +9,12 @@ def generate_random_list(size, max_val):
         rand_list.append(randint(1, max_val))
     return rand_list
 
+def analyze_func(func_name, arr):
+    start_time = time.time()
+    func_name(arr)
+    end_time = time.time()
+    seconds = end_time - start_time
+    print(f"{func_name} -> Runtime : {seconds}")
 
 size = int(input("What is the size of the list you want to create "))
 max_val = int(input("What is the max value of the range "))
@@ -16,12 +22,8 @@ max_val = int(input("What is the max value of the range "))
 # print(generate_random_list(size, max_val))
 
 l = generate_random_list(size, max_val)
-start_time = time.time()
-quick_sort(l)
-end_time = time.time()
-print(f"QS Elapse time : {end_time - start_time}")
 
-start_time = time.time()
-mergesort(l)
-end_time = time.time()
-print(f"MS Elapse time : {end_time - start_time}")
+analyze_func(quick_sort, l)
+analyze_func(mergesort, l)
+
+
