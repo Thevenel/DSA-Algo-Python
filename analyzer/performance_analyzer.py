@@ -14,7 +14,7 @@ def analyze_func(func_name, arr):
     func_name(arr)
     end_time = time.time()
     seconds = end_time - start_time
-    print(f"{func_name.__name__.capitalize()}\t-> Runtime : {seconds}")
+    print(f"{func_name.__name__.capitalize()}\t-> Runtime : {seconds:.5f} secconds.") # use string formation
 
 size = int(input("What is the size of the list you want to create? "))
 max_val = int(input("What is the max value of the range? "))
@@ -28,7 +28,7 @@ for num in range(run_times):
     analyze_func(bubblesort, l.copy())
     analyze_func(quicksort, l)
     analyze_func(mergesort, l)
-    print("-" * 40)
+    print("-" * 47)
 
 # print(generate_random_list(size, max_val))
 
