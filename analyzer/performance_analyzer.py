@@ -25,9 +25,10 @@ for num in range(run_times):
     l = generate_random_list(size, max_val)
     # Because bubble sort makes in-place sort, we'll call it
     # with a copy to not modify our original list
-    analyze_func(bubblesort, l.copy())
+    # analyze_func(bubblesort, l.copy())
     analyze_func(quicksort, l)
-    analyze_func(mergesort, l)
+    # analyze_func(mergesort, l)
+    analyze_func(sorted, l)
     print("-" * 47)
 
 # print(generate_random_list(size, max_val))
