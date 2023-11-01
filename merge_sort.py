@@ -21,19 +21,19 @@ def merge_sort(arr1, arr2):
         j += 1
     return sorted_array
 
-def divide_arr(arr):
+def mergesort(arr):
     if len(arr) < 2:
         # print(f"Base case condition reached with: {arr[:]}")
         return arr[:]
     else:
         middle = len(arr)// 2 # divide the array into 2 part
-        l1 = divide_arr(arr[:middle]) # take the left part 
-        l2 = divide_arr(arr[middle:]) # take the right part
+        l1 = mergesort(arr[:middle]) # take the left part 
+        l2 = mergesort(arr[middle:]) # take the right part
         return merge_sort(l1, l2) # take l1 and l2 merge them into single sorted list
 # xxxxxxxxxxxxxxxxx Program Execution xxxxxxxxxxxxxxxx
 
 l = [10, 9, 2, 7, 1, 4, 6, 3, 8, 10]
-print(divide_arr(l))
+print(mergesort(l))
 
 
 
