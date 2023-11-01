@@ -9,4 +9,6 @@ def generate_random_list(size, max_val):
     return rand_list
 
 
-print(generate_random_list(10, 10))
+size = int(input("What is the size of the list you want to create "))
+max_val = int(input("What is the max value of the range "))
+print(generate_random_list(size, max_val))
