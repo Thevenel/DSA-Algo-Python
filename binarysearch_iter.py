@@ -20,8 +20,12 @@ def create_list(max_val):
 
 
 
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 #ind 0  1  2  3  4  5  6  7  8  9
 
 num_to_search = 11
-print(binary_search_iter(num_to_search, l))
+l = create_list(10)
+for num in range(15):
+    print(binary_search_iter(num, l))
+
+
