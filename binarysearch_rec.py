@@ -19,4 +19,5 @@ def create_list(max_val):
 l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 #ind 0  1  2  3  4  5  6  7  8  9
 num_to_search = 8
-print(binary_search_rec(num_to_search, l, 0, len(l)-1))
+for num in  range(16):
+    print(binary_search_rec(num, l, 0, len(l)-1))
