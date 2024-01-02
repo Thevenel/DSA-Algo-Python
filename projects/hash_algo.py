@@ -55,11 +55,10 @@ class AlgoHashTable:
         return "".join(str(item) for item in self.hash_table)
 
 hash_table = AlgoHashTable(256)
-# Testing the set method
-hash_table.set_values('thevenel', 'Python expert')
-hash_table.set_values('thev@thev.com', 'Python senior expert')
-print(hash_table)
-hash_table.set_values('thevenel', 'I love Python')
-hash_table.delete_record('thevenel')
-print(hash_table)
+with open("data.txt") as f:
+    for line in f:
+        key, value = line.split(':')
+        hash_table.set_values(key, value)
 
+print(hash_table.get_val('thev@example.com'))
+print(hash_table.get_val('thevenel@example.com'))
