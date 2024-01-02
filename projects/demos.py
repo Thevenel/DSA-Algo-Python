@@ -40,3 +40,4 @@ def analyze_func(func_name, *args):
     seconds = stop_time - start_time
     print(f"{func_name.__name__.capitalize()}\t-> Elapsed time : {seconds:.5f}")
 
+print(generate_name(10))
